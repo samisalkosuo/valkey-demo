@@ -1,4 +1,4 @@
-#= valkey-demo
+= valkey-demo
 
 Valkey (Redis) container. For demo/test/dev.
 
