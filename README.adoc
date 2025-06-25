@@ -1,0 +1,21 @@
+#= valkey-demo
+
+Valkey (Redis) container. For demo/test/dev.
+
+Requires certificates. Add them to certs-directory and then build container.
+
+```
+podman build -t valkey . 
+```
+
+Run Valkey. Environment variable VALKEY_PASSWORD is mandatory.
+
+```
+podman run -it --rm --name valkey -e VALKEY_PASSWORD=passw0rd -p 6379:6379 valkey
+```
+
+Run Valkey with persistence data. Environment variable VALKEY_PASSWORD is mandatory.
+
+```
+podman run -it --rm --name valkey -e VALKEY_PASSWORD=passw0rd -p 6379:6379 -v /tmp/valkey-data:/data valkey
+```
